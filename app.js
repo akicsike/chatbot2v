@@ -20,9 +20,12 @@ app.listen((process.env.PORT || 5000));
 // //   res.send("Deployed!");
 // // });
 
-// app.get('/', function(req, res) {
-//   res.sendFile(path.join(__dirname + '/index.html'));
-// });
+app.get('/', function(req, res) {
+  res.sendFile(path.join(__dirname + '/index.html'));
+});
+app.get('/privacy', function(req, res) {
+  res.sendFile(path.join(__dirname + '/privacy.html'));
+});
 
 // app.listen(port, () => console.log(`url-shortener listening on port ${port}!`));
 

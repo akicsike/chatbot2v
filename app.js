@@ -7,8 +7,8 @@ var bodyParser = require("body-parser");
 const path = require('path');
 const port = process.env.PORT || 3000;
 
-const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
-// const PAGE_ACCESS_TOKEN = 'EAADevKQwm2wBAMCLpIIKTNocMBS4eibWthS0x3awcV4AZAZCCi7Gydj3LxvYbUMCMOrLCWYknoszRL0OShMCYR9jMbgWigt44VDeu6AlOpKF8aLqFI9N8tWZCODropiqeqpsbv6SkWbZA5Su55H68d9zF9a1Lh1HSJK9ZAZCTUMxvZBZCN448Ao5';
+// const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
+const PAGE_ACCESS_TOKEN = 'EAADevKQwm2wBALDVRDoAZCfwZBKU8TOxPMp1BzFGaqa0TLxgvOmBChjMM4hlZB1Gxtyzc6XxQ8Ocixpzjypl5qnqVy6HPK0EceIqCytiQhVgxJmdITvLH9ZAZCK2rgdloj65IL7I2ZAY1ZBobdUcDS8oDRSXgho0A3kiJfdg0eeDQZDZD';
 
 var app = express();
 // app.use(bodyParser.urlencoded({extended: false}));
@@ -115,15 +115,15 @@ function callSendAPI(sender_psid, response) {
   // Construct the message body
   let request_body = {
     "recipient": {
-      "id": sender_psid
+      "id": '244901789866860'
     },
-    "message": response
+    "message": 'proba uzenet'
   }
 
   // Send the HTTP request to the Messenger Platform
   request({
     "uri": "https://graph.facebook.com/v2.6/me/messages",
-    "qs": { "access_token": process.env.PAGE_ACCESS_TOKEN },
+    "qs": { "access_token": PAGE_ACCESS_TOKEN },
     "method": "POST",
     "json": request_body
   }, (err, res, body) => {
